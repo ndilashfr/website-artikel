@@ -1,0 +1,411 @@
+/* File: css/theme-glossy-pastel.css */
+/* Tema Glossy Pastel */
+
+/* Menggunakan font yang lebih bulat dan modern */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+  --glossy-bg: #eef0f8; /* Latar belakang putih kebiruan yang sangat lembut */
+  --glossy-text: #5b6483; /* Teks biru dongker pudar */
+  --glossy-accent-pink: #ff8fa3;
+  --glossy-accent-pink-dark: #ff6f81;
+  --glossy-shadow-dark: rgba(209, 214, 237, 0.7);
+  --glossy-shadow-light: #ffffff;
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Nunito", sans-serif;
+  color: var(--glossy-text);
+
+  /* Properti Flexbox untuk sticky footer (tetap ada) */
+  min-height: 100vh; /* diubah dari 100% ke 100vh untuk hasil lebih baik */
+  display: flex;
+  flex-direction: column;
+}
+/* === NAVIGASI === */
+/* ======================================================= */
+/* NAVIGASI (VERSI BARU - DARK & ELEGAN)                 */
+/* ======================================================= */
+
+.navbar {
+  /* Kita gunakan warna latar yang gelap tapi tidak hitam pekat */
+  background-color: #2c2f33 !important; /* Warna charcoal/abu gelap */
+  backdrop-filter: blur(10px); /* Efek blur jika background di belakangnya terlihat */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  /* Hapus box-shadow glossy agar lebih clean */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+/* Pastikan semua teks di navbar berwarna terang agar mudah dibaca */
+.navbar-brand,
+.nav-link,
+.dropdown-toggle {
+  color: rgba(255, 255, 255, 0.8) !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link:hover,
+.navbar-brand:hover,
+.dropdown-toggle:hover {
+  color: #ffffff !important;
+}
+
+/* Memberi tanda pada halaman yang sedang aktif */
+.nav-link.active {
+  font-weight: 700;
+  color: #ffffff !important;
+}
+
+/* Tombol user dropdown sekarang menyatu dengan navbar */
+.dropdown .btn.btn-dark {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Dropdown menu tetap menggunakan gaya glossy pastel */
+.dropdown-menu {
+  background-color: var(--glossy-bg);
+  border: none;
+  border-radius: 12px;
+  box-shadow: 7px 7px 14px var(--glossy-shadow-dark),
+    -7px -7px 14px var(--glossy-shadow-light);
+}
+.dropdown-item { 
+  color: var(--glossy-text) !important; 
+  font-weight: 600;
+}
+.dropdown-item:hover { 
+  background-color: rgba(209, 214, 237, 0.5); 
+}
+.dropdown-divider { 
+  border-top-color: var(--glossy-shadow-dark) !important; 
+}
+
+/* === KARTU ARTIKEL & SIDEBAR (EFEK GLOSSY/TIMBUL) === */
+.card {
+  background: var(--glossy-bg);
+  border: none;
+  border-radius: 20px;
+  box-shadow: 10px 10px 20px var(--glossy-shadow-dark),
+    -10px -10px 20px var(--glossy-shadow-light);
+  transition: all 0.3s ease-in-out;
+}
+.card-header {
+  background-color: transparent !important;
+  border-bottom-color: var(--glossy-shadow-dark) !important;
+  padding-top: 1.5rem;
+  padding-bottom: 0;
+}
+.card:hover {
+  box-shadow: inset 7px 7px 14px var(--glossy-shadow-dark),
+    inset -7px -7px 14px var(--glossy-shadow-light);
+}
+.card-title a {
+  color: var(--glossy-text) !important;
+  font-weight: 700;
+}
+
+/* === TOMBOL === */
+.btn-primary {
+  background: var(--glossy-accent-pink) !important;
+  border: none !important;
+  border-radius: 12px;
+  color: white !important;
+  font-weight: 700;
+  box-shadow: 5px 5px 10px #d6bdc1, -5px -5px 10px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.btn-primary:hover {
+  background: var(--glossy-accent-pink-dark) !important;
+  box-shadow: inset 5px 5px 10px #d6bdc1, inset -5px -5px 10px #ffffff;
+}
+.btn-secondary {
+  background: var(
+    --glossy-bg
+  ) !important; /* Warna sama dengan latar belakang */
+  border: none !important;
+  border-radius: 12px;
+  color: var(--glossy-text) !important; /* Warna teks sesuai tema */
+  font-weight: 600;
+  /* Efek shadow yang sama dengan kartu, membuatnya seolah-olah timbul */
+  box-shadow: 5px 5px 10px var(--glossy-shadow-dark),
+    -5px -5px 10px var(--glossy-shadow-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  /* Saat disentuh, efeknya menjadi seolah-olah ditekan ke dalam */
+  box-shadow: inset 5px 5px 10px var(--glossy-shadow-dark),
+    inset -5px -5px 10px var(--glossy-shadow-light);
+}
+.btn-outline-secondary {
+  background: var(--glossy-bg) !important;
+  border: none !important;
+  border-radius: 12px;
+  color: var(--glossy-text) !important;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px var(--glossy-shadow-dark),
+    -5px -5px 10px var(--glossy-shadow-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-secondary:hover {
+  box-shadow: inset 5px 5px 10px var(--glossy-shadow-dark),
+    inset -5px -5px 10px var(--glossy-shadow-light);
+}
+
+/* === TEKS & LINK LAINNYA === */
+a {
+  color: var(--glossy-accent-pink);
+}
+a:hover {
+  color: var(--glossy-accent-pink-dark);
+}
+h2 {
+  color: var(--glossy-text);
+}
+.border-bottom {
+  border-color: var(--glossy-shadow-dark) !important;
+}
+.text-muted,
+.text-muted a {
+  color: #8a93b0 !important;
+}
+
+/* === FEATURED ARTICLE === */
+.card.text-bg-dark {
+  background: var(--glossy-bg) !important;
+  box-shadow: 10px 10px 20px var(--glossy-shadow-dark),
+    -10px -10px 20px var(--glossy-shadow-light);
+}
+.card.text-bg-dark .card-title,
+.card.text-bg-dark .card-text {
+  color: var(--glossy-text) !important;
+  text-shadow: 1px 1px 2px var(--glossy-shadow-light);
+}
+.card.text-bg-dark .card-img {
+  opacity: 0.9;
+}
+.card.text-bg-dark .card-img-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(238, 240, 248, 0.8) 0%,
+    rgba(238, 240, 248, 0) 100%
+  );
+}
+.card.text-bg-dark .btn-light {
+  background-color: var(--glossy-accent-pink);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 3px 3px 6px #d6bdc1, -3px -3px 6px #ffffff;
+}
+.card.text-bg-dark .btn-light:hover {
+  background-color: var(--glossy-accent-pink-dark);
+}
+
+/* ======================================================= */
+/* ATURAN CSS TAMBAHAN UNTUK ADMIN DASHBOARD             */
+/* ======================================================= */
+
+/* Mengatur Sidebar Navigasi Admin */
+.sidebar {
+  background: var(--glossy-bg);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  /* Memberi efek bayangan seolah-olah konten utama ada di atas sidebar */
+  box-shadow: 7px 0px 15px var(--glossy-shadow-dark) !important;
+  z-index: 100; /* Memastikan sidebar di atas konten */
+}
+
+.sidebar .nav-link {
+  font-weight: 600;
+  color: var(--glossy-text);
+  border-radius: 8px;
+  margin: 0 0.5rem 0.25rem 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar .nav-link:hover {
+  background-color: rgba(209, 214, 237, 0.5);
+}
+
+/* Gaya untuk link yang sedang aktif */
+.sidebar .nav-link.active {
+  background: var(--glossy-accent-pink);
+  color: white;
+  box-shadow: 3px 3px 6px #d6bdc1, -3px -3px 6px #ffffff;
+}
+
+.sidebar .nav-link .bi {
+  margin-right: 10px;
+}
+
+/* Mengatur Tabel Data */
+.table {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden; /* Penting agar border-radius di tabel bekerja */
+  border-color: transparent !important;
+  box-shadow: 10px 10px 20px var(--glossy-shadow-dark),
+    -10px -10px 20px var(--glossy-shadow-light);
+}
+
+.table thead {
+  background-color: #f8f9fa; /* Warna header tabel yang netral */
+}
+
+.table thead th {
+  background-color: var(--glossy-bg);
+  color: var(--glossy-text);
+  border: none;
+  font-weight: 700;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f3ff; /* Warna baris saat disentuh mouse */
+}
+
+/* Mengatur Tombol Aksi di Tabel (Edit & Hapus) */
+.btn-warning {
+  background: #ffc107 !important;
+  border: none !important;
+  color: #333 !important;
+  font-weight: 600;
+  box-shadow: 3px 3px 6px #e0d1b1, -3px -3px 6px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.btn-warning:hover {
+  box-shadow: inset 3px 3px 6px #e0d1b1, inset -3px -3px 6px #ffffff;
+}
+
+.btn-danger {
+  background: #dc3545 !important;
+  border: none !important;
+  color: white !important;
+  font-weight: 600;
+  box-shadow: 3px 3px 6px #d4b5b8, -3px -3px 6px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+.btn-danger:hover {
+  box-shadow: inset 3px 3px 6px #d4b5b8, inset -3px -3px 6px #ffffff;
+}
+
+/* Mengatur Form Input Pencarian */
+.form-control {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+.form-control:focus {
+  background: #ffffff;
+  border-color: var(--glossy-accent-pink);
+  box-shadow: 0 0 0 3px rgba(255, 143, 163, 0.25);
+}
+
+/* ======================================================= */
+/* GAYA TAMBAHAN KHUSUS UNTUK HALAMAN LOGIN              */
+/* ======================================================= */
+
+/* ======================================================= */
+/* GAYA BARU UNTUK HALAMAN LOGIN (MODERN & BERSIH)      */
+/* ======================================================= */
+
+body.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--glossy-bg);
+}
+
+.login-container {
+  /* Menggunakan gaya kartu biasa yang bersih dengan bayangan standar */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  /* Bayangan standar yang membuat kartu 'melayang' */
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08); 
+  width: 400px;
+  max-width: 90%;
+}
+
+.login-container h2 {
+  color: var(--glossy-text);
+  font-weight: 700;
+}
+
+/* Input field dengan gaya yang lebih tegas dan modern */
+.login-container .form-control {
+  background-color: #f8f9fa !important;
+  border: 1px solid #dee2e6 !important;
+  border-radius: 8px;
+  color: var(--glossy-text) !important;
+  padding: 1rem;
+  /* Hapus box-shadow inset yang lama */
+  box-shadow: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-container .form-control:focus {
+  border-color: var(--glossy-accent-pink) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(255, 143, 163, 0.25) !important;
+}
+
+.login-container .form-control::placeholder {
+  color: #999;
+}
+/* ======================================================= */
+/* PERBAIKAN FINAL & TUNTAS UNTUK FORM PENCARIAN         */
+/* ======================================================= */
+
+/* Kita targetkan .input-group di halaman admin (.sidebar) DAN halaman utama (aside) */
+.sidebar .input-group,
+aside .input-group {
+    display: flex;
+    flex-wrap: nowrap; /* Memaksa tombol untuk tidak pernah turun ke bawah */
+}
+
+/* Mengatur ulang input di dalam grup agar fleksibel */
+.sidebar .input-group .form-control,
+aside .input-group .form-control {
+    /* Kunci utamanya ada di sini: */
+    flex: 1 1 auto; /* Izinkan input untuk meregang */
+    width: 1%;      /* Trik agar peregangan flexbox bekerja benar */
+    
+    /* Reset gaya glossy yang bentrok */
+    box-shadow: none !important;
+    border-radius: 12px 0 0 12px !important; /* Atur sudut kiri */
+    border: 1px solid #ced4da;
+    border-right-width: 0; /* Hilangkan border kanan agar menempel */
+}
+
+/* Mengatur ulang tombol di dalam grup */
+.sidebar .input-group .btn,
+aside .input-group .btn {
+    box-shadow: none !important;
+    border-radius: 0 12px 12px 0 !important; /* Atur sudut kanan */
+}
+
+/* Mengatur ulang efek focus pada input */
+.sidebar .input-group .form-control:focus,
+aside .input-group .form-control:focus {
+    z-index: 3;
+    border-color: var(--glossy-accent-pink);
+    box-shadow: 0 0 0 3px rgba(255, 143, 163, 0.25) !important;
+}
+
+/* Mengatur ulang efek hover pada tombol */
+.sidebar .input-group .btn:hover,
+aside .input-group .btn:hover {
+    transform: none !important;
+    filter: brightness(95%);
+}

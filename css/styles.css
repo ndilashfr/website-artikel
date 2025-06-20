@@ -1,0 +1,195 @@
+/* ======================================================= */
+/* TEMA FINAL: ELEGAN MONOKROM (SELARAS)                  */
+/* ======================================================= */
+
+/* 1. PUSAT KENDALI WARNA BARU (TEMA ELEGAN) */
+:root {
+    --elegan-bg: #ffffff;           /* Latar belakang putih bersih */
+    --elegan-header-bg: #121212;    /* Header abu-abu sangat gelap */
+    --elegan-header-text: #ffffff;  /* Teks di header (putih) */
+    --elegan-text-primary: #212529; /* Teks utama (hitam lembut) */
+    --elegan-text-secondary: #6c757d;/* Teks sekunder (abu-abu untuk tanggal, dll) */
+    --elegan-accent: #007bff;       /* Warna aksen standar (biru) untuk link */
+    --elegan-accent-hover: #0056b3; /* Warna aksen saat disentuh */
+    --elegan-button-bg: #212529;   /* Tombol hitam */
+    --elegan-border: #dee2e6;       /* Warna garis/border */
+  }
+  
+  /* 2. STYLE DASAR */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--elegan-bg);
+    color: var(--elegan-text-primary);
+  }
+  
+  /* 3. MENERAPKAN TEMA ELEGAN SECARA KONSISTEN */
+  
+  /* HEADER */
+  header.bg-primary {
+    background: var(--elegan-header-bg) !important;
+    color: var(--elegan-header-text) !important;
+    border-bottom: 1px solid #333;
+    box-shadow: none;
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.25rem !important;
+  }
+  
+  header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    text-shadow: none;
+  }
+  
+  /* TOMBOL */
+  .btn-primary {
+    background-color: var(--elegan-button-bg) !important;
+    border-color: var(--elegan-button-bg) !important;
+    color: white !important;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .btn-primary:hover {
+    background-color: #495057 !important;
+    border-color: #495057 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  /* Tombol "Baca Selengkapnya" di Featured Article */
+  .card-img-overlay .btn-light {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: var(--elegan-text-primary);
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+  }
+  .card-img-overlay .btn-light:hover {
+      background-color: white;
+  }
+  
+  /* SEMUA LINK */
+  a {
+    color: var(--elegan-accent);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+  }
+  a:hover {
+    color: var(--elegan-accent-hover);
+  }
+  
+  /* KARTU ARTIKEL & SIDEBAR */
+  .card {
+    border: 1px solid var(--elegan-border); /* Beri border tipis agar lebih rapi */
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.05);
+  }
+  
+  .card-title a {
+    color: var(--elegan-text-primary);
+    font-weight: 600;
+  }
+  .card-title a:hover {
+    color: var(--elegan-accent); /* Saat judul disentuh, warnanya jadi warna aksen */
+  }
+  
+  /* Teks tanggal di bawah judul */
+  .text-muted {
+      color: var(--elegan-text-secondary) !important;
+  }
+  .text-muted a { /* Link kategori di bawah tanggal */
+      color: var(--elegan-text-secondary);
+      font-weight: 500;
+  }
+  .text-muted a:hover {
+      color: var(--elegan-accent);
+  }
+  
+  .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--elegan-border);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    /* Padding-left sudah dihapus, jadi akan kembali normal */
+}
+  
+  .border-bottom {
+      border-color: var(--elegan-border) !important;
+  }
+  /* ============================================== */
+/* PERBAIKAN: MERAPIKAN SIDEBAR & DETAIL ARTIKEL  */
+/* ============================================== */
+
+/* 1. Memberi jarak di dalam kartu sidebar */
+aside .card-body {
+    padding: 1.25rem;
+  }
+  
+  aside .card-header {
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    background-color: transparent;
+    border-bottom: 1px solid var(--elegan-border);
+  }
+  
+  /* 2. Membuat daftar artikel terkait lebih interaktif */
+  aside .list-unstyled li a {
+    display: block;
+    padding: 0.75rem 0.25rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    color: var(--elegan-text-primary);
+  }
+  
+  aside .list-unstyled li a:hover {
+    background-color: #f8f9fa;
+    color: var(--elegan-accent);
+  }
+  
+  aside .list-unstyled li {
+      border-bottom: 1px solid #f0f0f0;
+      margin-bottom: 0.5rem;
+  }
+  aside .list-unstyled li:last-child {
+      border-bottom: none;
+  }
+/* ============================================== */
+/* POLESAN AKHIR UNTUK HALAMAN ARTIKEL             */
+/* ============================================== */
+.article-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem !important;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+}
+
+.article-content {
+    font-size: 1.1rem; /* Ukuran font isi artikel agar nyaman dibaca */
+    line-height: 1.8;  /* Jarak antar baris lebih lega */
+    color: #343a40;
+}
+
+.article-content p,
+.article-content ul,
+.article-content ol {
+    margin-bottom: 1.5rem;
+}
+
+.article-content h2,
+.article-content h3,
+.article-content h4 {
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}

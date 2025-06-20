@@ -1,0 +1,35 @@
+/* css/dark-mode.css */
+body {
+    background-color: #2c3333; /* Latar belakang abu-abu gelap */
+    color: #e0e0e0;
+}
+
+.card {
+    background-color: #393e46; /* Warna kartu lebih gelap */
+    border-color: #444;
+}
+
+.card-title a, .card-text, p {
+    color: #e0e0e0 !important;
+}
+
+header.bg-primary {
+    background-color: #a58faa !important; /* Ungu pudar untuk header */
+}
+
+a {
+    color: #a58faa;
+}
+a:hover {
+    color: #f6d198;
+}
+
+.card-header {
+    background-color: #5c6e6e;
+    border-color: #333;
+    color: #e0e0e0;
+}
+
+footer.bg-dark {
+    background-color: #393e46 !important;
+}
