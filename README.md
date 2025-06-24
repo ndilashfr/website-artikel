@@ -33,7 +33,7 @@ Penasaran dengan hasilnya? Anda bisa mengakses versi live dari website ini di:
 
 **[yourdailyneedarticles.infinityfreeapp.com](http://yourdailyneedarticles.infinityfreeapp.com/)**
 
-_(Jangan lupa ganti dengan link website Anda yang benar di InfinityFree)_
+
 
 ## 🛠️ Teknologi yang Digunakan
 
