@@ -33,6 +33,8 @@
                             <li><a class="dropdown-item" href="profil.php"><i class="bi bi-person-fill me-2"></i> Profil Saya</a></li>
                             <li><a class="dropdown-item" href="artikel_add.php"><i class="bi bi-plus-square-fill me-2"></i> Tambah Artikel</a></li>
                             <li><a class="dropdown-item" href="artikel_penulis.php"><i class="bi bi-file-earmark-text-fill me-2"></i> Artikel Saya</a></li>
+                            <li><a class="dropdown-item" href="artikel_disimpan.php"><i class="bi bi-bookmark-heart-fill me-2"></i> Bookmark</a></li>
+    
     
                               <?php if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'): ?>
                                 <li><a class="dropdown-item" href="admin_dashboard.php"><i class="bi bi-speedometer2 me-2"></i> Dashboard Admin</a></li>

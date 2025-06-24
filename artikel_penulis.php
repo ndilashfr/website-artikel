@@ -38,7 +38,7 @@ include 'layout_header.php';
         <div class="card border-0 shadow-sm">
             <div class="card-header bg-white py-3 d-flex justify-content-between align-items-center">
                 <h3 class="mb-0">Artikel yang Telah Anda Publikasikan</h3>
-                <a href="tambah_artikel.php" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> Tulis Artikel Baru</a>
+                <a href="artikel_add.php" class="btn btn-primary btn-sm"><i class="bi bi-plus-lg"></i> Tulis Artikel Baru</a>
             </div>
             <div class="card-body p-4">
                 

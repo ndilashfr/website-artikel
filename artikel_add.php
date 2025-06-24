@@ -43,6 +43,12 @@ include 'layout_header.php';
                         </select>
                     </div>
 
+                    <div class="mb-3">
+                        <label for="tags" class="form-label fw-bold">Tags:</label>
+                        <input type="text" class="form-control" id="tags" name="tags" placeholder="Contoh: healing, kuliner, murah, instagramable">
+                        <small class="form-text text-muted">Use tags to describe your articles.</small>
+                    </div>
+
                     <div class="mb-4">
                         <label for="isi" class="form-label fw-bold">Isi Artikel:</label>
                         <textarea class="form-control" id="isi" name="isi" rows="10"></textarea>
