@@ -51,7 +51,7 @@ Penasaran dengan hasilnya? Anda bisa mengakses versi live dari website ini di:
 1.  Pastikan Anda memiliki server lokal seperti Laragon atau XAMPP yang sudah terinstall.
 2.  Clone repository ini ke komputer Anda:
     ```bash
-    git clone [https://github.com/NamaAnda/nama-repo-anda.git](https://github.com/NamaAnda/nama-repo-anda.git)
+    git clone [https://github.com/ndilashfr/website-artikel.git](https://github.com/ndilashfr/website-artikel.git)
     ```
 3.  Letakkan folder proyek di dalam direktori web server Anda (misal: `D:\laragon\www\`).
 4.  Buat sebuah database baru di MySQL/phpMyAdmin dengan nama `webpage`.
